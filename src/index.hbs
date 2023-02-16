@@ -1,0 +1,42 @@
+{{> partials/head
+    lang="it"
+    title="Page | Company" 
+    description="Description"
+    canonical="https://site.com"
+    socialTitle="Company | Payoff"
+    socialImage="https://site.com/images/globals/cover-social.jpg"
+    socialDescription="Description"
+    siteUrl="https://site.com"
+    companyName="Company"
+}}
+
+<body class="home-template">
+    <!--  Main Wrap  -->
+    <main>
+        <div id="main-wrap">
+            <!--  Header & Menu  -->
+            <!--  padding-sm, padding-md, padding-lg  -->
+            {{> partials/navigation}}
+            <div class="page-header--home">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 data-animation="hero">This is the title</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content--home" id="page-content">
+                <section id="intro">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2 data-animation="split">This is the title</h2>
+                                <p data-animation="text" data-animation-delay="1">Paragraph text animation</p>
+                                <p data-animation="fade" data-animation-delay="2">Paragraph text fade</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            {{> partials/footer}}

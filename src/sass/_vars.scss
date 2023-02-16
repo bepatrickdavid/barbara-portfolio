@@ -1,0 +1,84 @@
+// =  Vars
+
+/*-------------------------------------------------*/
+
+$primary-font: 'Lausanne',
+Helvetica,
+Arial,
+sans-serif;
+$secondary-font: 'Lausanne',
+Helvetica,
+Arial,
+sans-serif;
+$paragraph-font: 'Lausanne',
+Helvetica,
+Arial,
+sans-serif;
+$alt-font: 'Neue Pixel Grotesk',
+Helvetica,
+Arial,
+sans-serif;
+$primary-color: #222222;
+$primary-color-light: #505050;
+$paragraph-color: #222222;
+$paragraph-color-light: #505050;
+$secondary-color: #EBA60C;
+$secondary-color-2: #F4F8F1;
+$grey-bg: #F8F8F8;
+$dark-grey: #505050;
+$template-bg: #F4F8F1;
+$dark-bg: #222222;
+$acquamarine: #61F5BF;
+$keppel: #47B6A5;
+$light-yellow: #FFF1D4;
+$light-cyan: #C7E4DC;
+$mint-cream: #F4F8F1;
+$dark-cerulean: #0E3F8C;
+$punch: #C60039;
+$conifer: #59C673;
+$red: #dc3545;
+$brown: #3A2200;
+$white: #fff;
+$assetPath: '../images';
+
+/*-------------------------------------------------*/
+
+// = Element Color
+
+/*-------------------------------------------------*/
+
+$mobile-menu-bg: $secondary-color;
+$ctabox-element-bg: $light-yellow;
+$icon-element-icon: #FFF4F4;
+$icon-element-bg: #FFF4F4;
+$icon-element-box-bg: #FFF4F4;
+$accordion-element-icon: #FFF4F4;
+$accordion-element-bg: #FFF4F4;
+$blockquote-element-bg: #FFF4F4;
+$navigation-element-bg: #FFF4F4;
+$input-form-bg: #FFF4F4;
+$dropdown-menu-bg: #FFF4F4;
+$dropdown-menu-item-bg: #FFF4F4;
+$button-menu-bg: #FFF4F4;
+$top-menu-bg: #FFF4F4;
+$menu-bg:#FFF4F4;
+$menu-bg-2row:#FFF4F4;
+$position-element-bg: #FFF4F4;
+$code-element-bg: #FFF4F4;
+$page-header-bg: #FFF4F4;
+$overlay-dark-bg: #192D35;
+$arrow-headerslider-bg: #FFF4F4;
+$border-element-color: rgba(151, 151, 151, 0.47);
+
+/*-------------------------------------------------*/
+
+// = Responsive
+
+/*-------------------------------------------------*/
+
+$mobile: 414px;
+$xsmall: 480px;
+$small: 576px;
+$medium: 768px;
+$large: 991px;
+$full: 1199px;

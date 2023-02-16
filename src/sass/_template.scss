@@ -1,0 +1,16 @@
+/*-------------------------------------------------*/
+
+
+/* =  7.Template
+/*-------------------------------------------------*/
+
+#main-wrap {
+    overflow-x: hidden;
+    opacity: 0;
+    .container {
+        @include media(small) {
+            padding-right: 25px;
+            padding-left: 25px;
+        }
+    }
+}
