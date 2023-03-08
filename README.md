@@ -1,2 +1,2 @@
-# static-html-webpack-boilerplate
-Static HTML Website Development Boilerplate
+# barbara-portfolio
+🎨 Barbara Portfolio Website Development

@@ -4,13 +4,43 @@
 /* =  7.Template
 /*-------------------------------------------------*/
 
+:root {
+    --main-padding-left: 80px;
+    --main-padding-right: 80px;
+    @include media(fullhd) {
+        --main-padding-left: 4.166666vw;
+        --main-padding-left: 4.166666vw;
+    }
+    @include media(full) {
+        --main-padding-left: 50px;
+        --main-padding-left: 50px;
+    }
+    @include media(small) {
+        --main-padding-left: 25px;
+        --main-padding-left: 25px;
+    }
+}
+
+html {
+    --htmlBg: var(--template-bg);
+    background-color: var(--htmlBg);
+    &[data-theme="dark"] {
+        --htmlBg: var(--dark-bg);
+        --primary-color: var(--white);
+        --primary-color-light: var(--white);
+        --neutral-900: var(--white);
+        --neutral-800: var(--white);
+        --paragraph-color: var(--white);
+        --paragraph-color-light: var(--white);
+    }
+}
+
 #main-wrap {
     overflow-x: hidden;
     opacity: 0;
     .container {
-        @include media(small) {
-            padding-right: 25px;
-            padding-left: 25px;
-        }
+        max-width: 100%;
+        padding-left: var(--main-padding-left);
+        padding-right: var(--main-padding-left);
     }
 }

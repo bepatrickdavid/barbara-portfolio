@@ -3,7 +3,7 @@ export function fontCheck() {
     if (document && document.fonts) {
         // Do not block page loading
         setTimeout(function() {
-            document.fonts.load('16px "Lausanne"').then(() => {
+            document.fonts.load('16px "Tusker Grotesk"').then(() => {
                 // Make font using elements visible
                 document.documentElement.classList.add('font-loaded')
             })

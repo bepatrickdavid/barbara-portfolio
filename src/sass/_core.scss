@@ -7,7 +7,7 @@
 html {
     line-height: 1.54;
     font-size: 16px;
-    color: $primary-color;
+    color: var(--primary-color);
     font-family: $primary-font;
     scroll-behavior: smooth;
 }
@@ -16,7 +16,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
-    color: $primary-color;
+    color: var(--primary-color);
     font-family: $primary-font;
     &[class*="no-scroll"] {
         overflow-y: hidden;
@@ -28,12 +28,12 @@ body {
 }
 
 ::-moz-selection {
-    background: $secondary-color;
+    background: var(--secondary-color);
     color: white;
 }
 
 ::selection {
-    background: $secondary-color;
+    background: var(--secondary-color);
     color: white;
 }
 
@@ -59,10 +59,7 @@ h6,
         display: block;
     }
     em {
-        color: $secondary-color;
-        &[class*="alt"] {
-            font-family: $alt-font;
-        }
+        color: var(--secondary-color);
     }
     [class*="line"] {
         overflow: hidden;
@@ -79,158 +76,127 @@ h6,
 
 h1,
 [class*="h1"] {
-    font-size: 3.5rem;
+    font-size: 3.75rem;
     line-height: 1.1428;
-    @include media(medium) {
-        font-size: 3rem;
-    }
-    @include media(phoneplus) {
-        font-size: 2.5rem;
-    }
+    // @include media(medium) {
+    //     font-size: 3rem;
+    // }
+    // @include media(phoneplus) {
+    //     font-size: 2.5rem;
+    // }
     &[class*="xl"] {
-        font-size: 5.625rem;
-        line-height: 1.244;
-        @include media(medium) {
-            font-size: 4rem;
+        font-size: 11.8125rem;
+        line-height: 1.15;
+        @include media(full-hdi) {
+            font-size: 10rem;
         }
-        @include media(phoneplus) {
-            font-size: 3.5rem;
+        @include media(fhd) {
+            font-size: 9.8386vw;
         }
     }
     &[class*="lg"] {
-        font-size: 4.875rem;
+        font-size: 6.25rem;
         line-height: 1.128;
-    }
-    &[class*="md"] {
-        font-size: 4.0625rem;
-        line-height: 1.23;
         @include media(hd) {
-            font-size: 3.3837vw;
+            //font-size: 3.3837vw;
         }
         @include media(2k) {
-            font-size: 3.3837vw;
+            //font-size: 3.3837vw;
         }
         @include media(4k) {
-            font-size: 3.3837vw;
-        }
-        @include media(medium) {
-            font-size: 3rem;
-        }
-        @include media(phoneplus) {
-            font-size: 2.5rem;
+            //font-size: 3.3837vw;
         }
     }
 }
 
 h2,
 [class*="h2"] {
-    font-size: 3rem;
-    line-height: 1.166;
-    @include media(hd) {
-        font-size: 2.4987vw;
-    }
-    @include media(2k) {
-        font-size: 2.4987vw;
-    }
-    @include media(4k) {
-        font-size: 2.4987vw;
-    }
-    @include media(medium) {
-        font-size: 2.5rem;
-    }
-    @include media(phoneplus) {
-        font-size: 2.125rem;
-    }
+    font-size: 3.125rem;
+    // @include media(hd) {
+    //     font-size: 2.4987vw;
+    // }
+    // @include media(2k) {
+    //     font-size: 2.4987vw;
+    // }
+    // @include media(4k) {
+    //     font-size: 2.4987vw;
+    // }
+    // @include media(medium) {
+    //     font-size: 2.5rem;
+    // }
+    // @include media(phoneplus) {
+    //     font-size: 2.125rem;
+    // }
 }
 
 h3,
 [class*="h3"] {
     font-size: 2rem;
-    line-height: 1.25;
+    @include media(fhd) {
+        font-size: 1.6658vw;
+    }
     @include media(medium) {
         font-size: 1.625rem;
     }
     @include media(phoneplus) {
         font-size: 1.5rem;
     }
+    &[class*="lg"] {
+        font-size: 2.5rem;
+    }
 }
 
 h4,
 [class*="h4"] {
-    font-size: 1.5rem;
-    line-height: 1.25;
-    @include media(hd) {
-        font-size: 1.30141vw;
-    }
-    @include media(2k) {
-        font-size: 1.30141vw;
-    }
-    @include media(4k) {
-        font-size: 1.30141vw;
-    }
+    font-size: 1.75rem;
+    // @include media(hd) {
+    //     font-size: 1.30141vw;
+    // }
+    // @include media(2k) {
+    //     font-size: 1.30141vw;
+    // }
+    // @include media(4k) {
+    //     font-size: 1.30141vw;
+    // }
 }
 
 h5,
 [class*="h5"] {
     font-size: 1.375rem;
-    line-height: 1.09;
-    @include media(hd) {
-        font-size: 1.625rem;
-    }
-    @include media(2k) {
+    @include media(fhd) {
         font-size: 1.145239vw;
     }
-    @include media(4k) {
-        font-size: 1.145239vw;
-    }
-    @include media(medium) {
-        font-size: 1.25rem;
-    }
-    @include media(phoneplus) {
-        font-size: 1.125rem;
-    }
+    // @include media(2k) {
+    //     font-size: 1.145239vw;
+    // }
+    // @include media(4k) {
+    //     font-size: 1.145239vw;
+    // }
+    // @include media(medium) {
+    //     font-size: 1.25rem;
+    // }
+    // @include media(phoneplus) {
+    //     font-size: 1.125rem;
+    // }
 }
 
 h6,
 [class*="h6"] {
-    font-size: 1.25rem;
-    line-height: 1.4;
+    font-size: 1.125rem;
 }
 
 [class*="h7"] {
-    font-size: 1.125rem;
-    line-height: 1.1;
-    @include media(hd) {
-        font-size: 0.9371vw
-    }
-    @include media(2k) {
-        font-size: 0.9371vw
-    }
-    @include media(4k) {
-        font-size: 0.9371vw
-    }
+    font-size: 1rem;
 }
 
 [class*="h8"] {
-    font-size: 1rem;
-    line-height: 1.1;
-    @include media(hd) {
-        font-size: 0.8329vw;
-    }
-    @include media(2k) {
-        font-size: 0.8329vw;
-    }
-    @include media(4k) {
-        font-size: 0.8329vw;
-    }
+    font-size: 0.875rem;
 }
 
 p {
     font-family: $paragraph-font;
-    color: $paragraph-color;
+    color: var(--paragraph-color);
     font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
     font-weight: 400;
     em {
         font-style: $alt-font;
@@ -238,10 +204,10 @@ p {
     b,
     strong {
         font-weight: 400;
-        color: $paragraph-color;
+        color: var(--paragraph-color);
     }
     a {
-        color: $secondary-color;
+        color: var(--secondary-color);
         transition: ease .4s opacity;
         display: inline-block;
         &:hover {
@@ -249,41 +215,25 @@ p {
             transition: ease .4s opacity;
         }
     }
-    &[class*="sm"] {
-        font-size: 0.875rem;
-    }
-    &[class*="h3"] {
-        line-height: 1.6;
-    }
-    &[class*="h5"] {
-        line-height: 1.4;
-    }
-    &[class*="h7"],
-    &[class*="h8"] {
-        line-height: 1.6;
-        &[class*="lh"] {
-            line-height: 1.4;
-        }
-    }
 }
 
 blockquote {
     @extend [class*="h3"];
     padding-left: 2.75rem;
-    border-left: 3px solid $secondary-color;
+    border-left: 3px solid var(--secondary-color);
     margin: 0.75rem 0;
     max-width: 750px;
 }
 
 pre {
     @extend [class*="h7"];
-    background-color: $grey-bg;
+    background-color: var(--grey-bg);
     padding: 4rem 3rem;
     white-space: normal;
     code {
         font-family: monospace;
         display: block;
-        color: $dark-grey;
+        color: var(--dark-grey);
         +code {
             margin-top: 1rem;
         }
@@ -313,7 +263,7 @@ figure {
     }
     figcaption {
         text-align: center;
-        color: $dark-grey;
+        color: var(--dark-grey);
         margin-top: 1rem;
         font-size: 1rem;
         line-height: 1.25;
@@ -371,13 +321,57 @@ figure {
     font-weight: 900 !important;
 }
 
+[class*="ffhead"] {
+    font-family: $secondary-font !important;
+}
+
+[class*="lh-150"] {
+    line-height: 150%;
+}
+
+[class*="lh-130"] {
+    line-height: 130%;
+}
+
+[class*="lh-120"] {
+    line-height: 120%;
+}
+
+[class*="lh-110"] {
+    line-height: 130%;
+}
+
+[class*="ffpar"] {
+    font-family: $paragraph-font !important;
+}
+
+[class*="ttuppercase"] {
+    text-transform: uppercase !important;
+}
+
+[class*="fcolor--accent"] {
+    color: var(--secondary-color);
+}
+
+[class*="fcolor--primary"] {
+    color: var(--primary-color);
+}
+
+[class*="fcolor--neutral800"] {
+    color: var(--neutral-800);
+}
+
+[class*="fcolor--neutral900"] {
+    color: var(--neutral-900);
+}
+
 [data-color="primary"],
 [data-color="colorone"] {
-    color: $secondary-color;
+    color: var(--secondary-color);
 }
 
 [data-color="darkgrey"] {
-    color: $dark-grey;
+    color: var(--dark-grey);
 }
 
 [data-bg="white"] {
@@ -386,40 +380,24 @@ figure {
 
 [data-bg="primary"],
 [data-bg="colorone"] {
-    background-color: $secondary-color;
+    background-color: var(--secondary-color);
 }
 
 [data-bg="secondary"],
 [data-bg="colortwo"] {
-    background-color: $secondary-color-2;
+    background-color: var(--secondary-color-2);
 }
 
 [data-bg="grey"] {
-    background-color: $grey-bg;
+    background-color: var(--grey-bg);
 }
 
 [data-bg="template"] {
-    background-color: $template-bg;
+    background-color: var(--template-bg);
 }
 
 [data-bg="dark"] {
-    background-color: $dark-bg;
-}
-
-[data-bg="mint"] {
-    background-color: $mint-cream;
-}
-
-[data-bg="darkcerulean"] {
-    background-color: $dark-cerulean;
-}
-
-[data-bg="punch"] {
-    background-color: $punch;
-}
-
-[data-bg="conifer"] {
-    background-color: $conifer;
+    background-color: var(--dark-bg);
 }
 
 [data-bg-top="white"] {
@@ -446,7 +424,7 @@ figure {
         right: 0;
         top: 0;
         bottom: 50%;
-        background-color: $secondary-color;
+        background-color: var(--secondary-color);
         z-index: -1;
     }
 }
@@ -460,7 +438,7 @@ figure {
         right: 0;
         top: 0;
         bottom: 50%;
-        background-color: $grey-bg;
+        background-color: var(--grey-bg);
         z-index: -1;
     }
 }
@@ -474,7 +452,7 @@ figure {
         right: 0;
         top: 0;
         bottom: 50%;
-        background-color: $template-bg;
+        background-color: var(--template-bg);
         z-index: -1;
     }
 }
@@ -488,7 +466,7 @@ figure {
         right: 0;
         top: 0;
         bottom: 50%;
-        background-color: $dark-bg;
+        background-color: var(--dark-bg);
         z-index: -1;
     }
 }
@@ -517,7 +495,7 @@ figure {
         right: 0;
         top: 50%;
         bottom: 0;
-        background-color: $secondary-color;
+        background-color: var(--secondary-color);
         z-index: -1;
     }
 }
@@ -531,7 +509,7 @@ figure {
         right: 0;
         top: 50%;
         bottom: 0;
-        background-color: $grey-bg;
+        background-color: var(--grey-bg);
         z-index: -1;
     }
 }
@@ -545,7 +523,7 @@ figure {
         right: 0;
         top: 50%;
         bottom: 0;
-        background-color: $template-bg;
+        background-color: var(--template-bg);
         z-index: -1;
     }
 }
@@ -559,7 +537,7 @@ figure {
         right: 0;
         top: 50%;
         bottom: 0;
-        background-color: $dark-bg;
+        background-color: var(--dark-bg);
         z-index: -1;
     }
 }

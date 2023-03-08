@@ -11,16 +11,7 @@ class textSplit {
         this.words = this.text.words;
         this.lines.forEach(l => {
             let chars = l.querySelectorAll('.char');
-            let notValid = [];
-            chars.forEach((element, i) => {
-                if (element.textContent.includes('i') || element.textContent.includes('l') || element.textContent.includes('.') || element.textContent.includes(',') || element.textContent.includes(';')) {
-                    notValid.push(i);
-                }
-            });
             let charsArray = Array.from({ length: chars.length }, (_, i) => i);
-            let filteredChars = charsArray.filter(function(obj) { return notValid.indexOf(obj) == -1; });
-            let randomChar = chars[filteredChars[Math.floor(Math.random() * filteredChars.length)]];
-            randomChar.classList.add('alt');
         });
         this.initEvents();
         this.tlTitleReveal.set(this.words, { opacity: 0, y: '200%', scaleX: 1, scaleY: 1.7, });
@@ -49,16 +40,7 @@ class textSplit {
 
             this.lines.forEach(l => {
                 let chars = l.querySelectorAll('.char');
-                let notValid = [];
-                chars.forEach((element, i) => {
-                    if (element.textContent.includes('i') || element.textContent.includes('l') || element.textContent.includes('.') || element.textContent.includes(',') || element.textContent.includes(';')) {
-                        notValid.push(i);
-                    }
-                });
                 let charsArray = Array.from({ length: chars.length }, (_, i) => i);
-                let filteredChars = charsArray.filter(function(obj) { return notValid.indexOf(obj) == -1; });
-                let randomChar = chars[filteredChars[Math.floor(Math.random() * filteredChars.length)]];
-                randomChar.classList.add('alt');
             });
 
             gsap.set(this.words, {
