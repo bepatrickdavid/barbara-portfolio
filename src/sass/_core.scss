@@ -65,7 +65,7 @@ h6,
         overflow: hidden;
     }
     [class*="word"] {
-        line-height: 0.9;
+        line-height: 1.15;
     }
     [class*="char"] {
         &[class*="alt"] {
@@ -112,6 +112,16 @@ h1,
 h2,
 [class*="h2"] {
     font-size: 3.125rem;
+    @include media(full) {
+        font-size: 2.5rem;
+    }
+    sup {
+        font-size: 1.75rem;
+        top: -1.5rem;
+        @include media(full) {
+            font-size: 1rem;
+        }
+    }
     // @include media(hd) {
     //     font-size: 2.4987vw;
     // }

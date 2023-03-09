@@ -12,3 +12,50 @@
         }
     }
 }
+
+[class|="wrapimage-element"] {
+    width: 100%;
+    overflow: hidden;
+    &:after {
+        content: "";
+        display: block;
+        padding-top: 52.5%;
+    }
+    img,
+    video {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &[class*="video"] {
+        border-radius: 20px;
+        &:after {
+            padding-top: 47.25%;
+            @include media(medium) {
+                padding-top: 56.25%;
+            }
+        }
+    }
+    &[class*="square"],
+    &[class*="round"] {
+        &:after {
+            content: "";
+            display: block;
+            padding-top: 100%;
+        }
+        img {
+            width: auto;
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    &[class*="round"] {
+        border-radius: 50%;
+    }
+}

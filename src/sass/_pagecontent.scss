@@ -1,1 +1,44 @@
-[class|="page-content"] {}
+[class|="page-content"] {
+    &[class*="home"] {
+        section {
+            &#video {
+                [class*="container"] {
+                    overflow: hidden;
+                }
+                [class*="col-"] {
+                    &:first-child {
+                        h2 {
+                            max-width: 278px;
+                        }
+                        &:after {
+                            content: "";
+                            display: block;
+                            padding-top: 50vw;
+                            @include media(full) {
+                                padding-top: 57vw;
+                            }
+                            @include media(medium) {
+                                padding-top: 59vw;
+                            }
+                            @include media(small) {
+                                padding-top: 65vw;
+                            }
+                        }
+                    }
+                }
+                [class*="wrapimage-element"] {
+                    &[class*="video"] {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        left: 30%;
+                        width: 70%;
+                        @include media(large) {
+                            top: 150px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

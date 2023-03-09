@@ -9,15 +9,15 @@
     --main-padding-right: 80px;
     @include media(fullhd) {
         --main-padding-left: 4.166666vw;
-        --main-padding-left: 4.166666vw;
+        --main-padding-right: 4.166666vw;
     }
     @include media(full) {
         --main-padding-left: 50px;
-        --main-padding-left: 50px;
+        --main-padding-right: 50px;
     }
     @include media(small) {
         --main-padding-left: 25px;
-        --main-padding-left: 25px;
+        --main-padding-right: 25px;
     }
 }
 

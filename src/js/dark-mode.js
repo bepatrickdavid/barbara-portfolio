@@ -28,7 +28,7 @@ export function darkMode() {
     const reflectPreference = () => {
         document.firstElementChild.setAttribute('data-theme', theme.value)
 
-        document.querySelector('#theme-toggle') ? document.querySelector('#theme-toggle').setAttribute('aria-label', theme.value) : '';
+        document.querySelector('#theme-mode [class*="btn"]') ? document.querySelector('#theme-mode [class*="btn"]').setAttribute('data-theme', theme.value) : '';
     }
 
     const theme = {
@@ -43,6 +43,6 @@ export function darkMode() {
         reflectPreference()
 
         // now this script can find and listen for clicks on the control
-        //document.querySelector('#theme-toggle').addEventListener('click', onClick)
+        document.querySelector('#theme-mode').addEventListener('click', onClick)
     }
 }

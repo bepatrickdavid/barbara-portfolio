@@ -10,7 +10,7 @@
     companyName="Company"
 }}
 
-<body class="home-template">
+<body class="home-template" style="min-height: 4000px;">
     <!--  Main Wrap  -->
     <main>
         <div id="main-wrap">
@@ -20,28 +20,32 @@
             <div class="page-header--home">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 col-lg-7">
+                        <div class="col-12 col-xl-7">
                             <h1 data-animation="hero" class="xl text-uppercase">Barbara<em>Scerbo</em></h1>
-                            <p class="h5 lh-150">Ho una vera ossessione per la carta, stampa e nobilitazioni ma mi ritrovo sempre su progetti digital!</p>
+                            <p data-animation="text" class="h5 lh-150">Ho una vera ossessione per la carta, stampa e nobilitazioni ma mi ritrovo sempre su progetti digital!</p>
                         </div>
                         <div class="col-12 col-xl-5">
-                            <p class="h3 lh-130">Sono una creativa siciliana esportata a Milano. <br>Mi occupo di branding, direzione creativa e consulenza.</p>
+                            <p data-animation="text" class="h3 lh-130">Sono una creativa siciliana esportata a Milano. <br>Mi occupo di branding, direzione creativa e consulenza.</p>
                         </div>
-                        <div id="scroll"><span class="h3 text-uppercase ffpar--lh100--f500">(scroll)</span></div>
+                        <div id="scroll"><span class="h3 text-uppercase ffpar--lh100">(<i class="f500">scroll</i>)</span></div>
                     </div>
                 </div>
             </div>
-            {{!-- <div class="page-content--home" id="page-content">
-                <section id="intro">
+            <div class="page-content--home" id="page-content">
+                <section id="video" data-padding="mdtop">
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
-                                <h2 data-animation="split">This is the title</h2>
-                                <p data-animation="text" data-animation-delay="1">Paragraph text animation</p>
-                                <p data-animation="fade" data-animation-delay="2">Paragraph text fade</p>
+                                <h2 data-animation="split" class="ffpar text-uppercase f500">Vedi il mio showreel 2023<sup>©</sup></h2>
+                                <div class="wrapimage-element--video">
+                                    <video muted autoplay loop>
+                                        <source src="https://bb.agency/wp-content/uploads/2023/01/showcase.webm" type="video/webm"><source>
+                                        <source src="https://bb.agency/wp-content/uploads/2022/06/showcase.mp4" type="video/mp4"><source>
+                                    </video>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
-            </div> --}}
+            </div>
             {{> partials/footer}}

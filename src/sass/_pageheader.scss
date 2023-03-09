@@ -13,6 +13,17 @@
                         >[class*="line"] {
                             &:nth-child(2) {
                                 margin-top: -1rem;
+                                @include media(fhd) {
+                                    margin-top: -0.85vw;
+                                }
+                                @include media(large) {
+                                    margin-top: -2.5vw;
+                                }
+                            }
+                        }
+                        &[class*="xl"] {
+                            @include media(large) {
+                                font-size: 25vw;
                             }
                         }
                     }
@@ -25,6 +36,9 @@
                 }
                 &:nth-child(2) {
                     align-self: end;
+                    @include media(full) {
+                        margin-top: 3rem;
+                    }
                     p {
                         text-align: right;
                         max-width: 449px;
@@ -35,6 +49,10 @@
                         }
                         @include media(full-hdi) {
                             max-width: 400px;
+                        }
+                        @include media(full) {
+                            max-width: 100%;
+                            text-align: left;
                         }
                         &[class*="h3"] {
                             @include media(full-hdi) {
@@ -50,6 +68,10 @@
                     left: 80px;
                     bottom: 50px;
                     left: var(--main-padding-left);
+                }
+                @include media(full) {
+                    padding-left: 15px;
+                    margin-top: 3rem;
                 }
             }
         }

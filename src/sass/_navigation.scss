@@ -4,4 +4,62 @@
 /* =  6.Main Navigation
 /*-------------------------------------------------*/
 
-header {}
+header {
+    width: 100%;
+    #main-logo {
+        position: fixed;
+        top: 17px;
+        left: 17px;
+        z-index: 2;
+        svg {
+            height: 60px;
+            width: auto;
+            display: block;
+        }
+    }
+    #main-gradient {
+        position: absolute;
+        right: -400px;
+        top: -400px;
+        @include media(fhd) {
+            right: -20.8225vw;
+            top: -20.8225vw;
+        }
+        @include media(small) {
+            right: -300px;
+            top: -300px;
+        }
+        svg {
+            z-index: -1;
+            position: relative;
+            @include media(fhd) {
+                width: 52.057vw;
+                height: 52.057vw;
+                display: block;
+            }
+            @include media(small) {
+                width: 800px;
+                height: 800px;
+                display: block;
+            }
+            circle {
+                @include media(fhd) {
+                    cx: 26.028vw;
+                    cy: 26.028vw;
+                    r: 10.411vw;
+                }
+                @include media(small) {
+                    cx: 400px;
+                    cy: 400px;
+                    r: 160px;
+                }
+            }
+        }
+    }
+    #theme-mode {
+        position: absolute;
+        right: var(--main-padding-right);
+        top: 17px;
+        z-index: 20;
+    }
+}
