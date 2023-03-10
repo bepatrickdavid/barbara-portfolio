@@ -3,6 +3,7 @@ import { headerGradient } from './js/menu.js';
 import { pageLoading } from './js/page-loading.js';
 import { mobile } from "./js/mobile.js";
 import { darkMode } from "./js/dark-mode.js";
+import { loopElement } from "./js/loopElement.js";
 import lazySizes from 'lazysizes';
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -14,6 +15,7 @@ pageLoading();
 headerGradient();
 mobile();
 darkMode();
+loopElement();
 
 
 let largeScreen = window.matchMedia("(max-width: 992px)");
@@ -27,11 +29,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const videoMoove = () => {
         if (largeScreen.matches) {
-            videoElementGapLeft = '-29.5%';
+            videoElementGapLeft = '0';
             videoElementGapTop = '50px';
-            videoElementWidth = '97%';
+            videoElementWidth = '92.5%';
         } else {
-            videoElementGapLeft = '-29.5%';
+            videoElementGapLeft = '0';
             videoElementGapTop = '268px';
             videoElementWidth = '100%';
         }

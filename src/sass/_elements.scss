@@ -59,3 +59,80 @@
         border-radius: 50%;
     }
 }
+
+[class|="loop-element"] {
+    --loop-element-height: 420px;
+    --loop-element-height-sm: 350px;
+    --loop-element-height-fhd: 21.875vw;
+    height: var(--loop-element-height);
+    position: relative;
+    margin-left: 0px;
+    margin-right: 0px;
+    overflow: hidden;
+    @include media(small) {
+        height: var(--loop-element-height-sm);
+    }
+    @include media(fhd) {
+        height: var(--loop-element-height-fhd);
+    }
+    .marquee {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        overflow: hidden;
+        pointer-events: none;
+        height: var(--loop-element-height);
+        display: flex;
+        align-items: center;
+        z-index: 2;
+        @include media(small) {
+            height: var(--loop-element-height-sm);
+        }
+        @include media(fhd) {
+            height: var(--loop-element-height-fhd);
+        }
+        .marquee--inner {
+            will-change: transform;
+            width: fit-content;
+            display: flex;
+            position: relative;
+            .wrapper {
+                white-space: nowrap;
+                position: relative;
+                display: flex;
+                align-items: center;
+                &[class*="h1"] {
+                    color: $primary-color;
+                    span {
+                        &[class*="line"] {
+                            width: 52px;
+                            height: 52px;
+                            background-image: url(#{$assetPath}/globals/loop-element.svg);
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            margin: 0 0.5rem 0.5rem 0.5rem;
+                            @include media(fhd) {
+                                width: 2.707vw;
+                                height: 2.707vw;
+                                margin: 0 0.4175vw 0.4175vw 0.4175vw;
+                            }
+                            @include media(small) {
+                                width: 45px;
+                                height: 45px;
+                                margin: 0 0.4rem 0.4rem 0.4rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &:hover {
+        .marquee {
+            .marquee--inner {
+                animation-play-state: paused;
+            }
+        }
+    }
+}

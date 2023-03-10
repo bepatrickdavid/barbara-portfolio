@@ -6,6 +6,7 @@
 
 header {
     width: 100%;
+    position: relative;
     #main-logo {
         position: fixed;
         top: 17px;
@@ -61,5 +62,25 @@ header {
         right: var(--main-padding-right);
         top: 17px;
         z-index: 20;
+        [class*=caption] {
+            position: absolute;
+            bottom: -55px;
+            left: 15px;
+            right: 15px;
+            text-align: right;
+            height: 48px;
+            overflow: hidden;
+            span {
+                line-height: 110%;
+                transition: transform 1250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+                display: inline-block;
+                @include media(small) {
+                    font-size: 0.75rem;
+                }
+                >span {
+                    display: block;
+                }
+            }
+        }
     }
 }

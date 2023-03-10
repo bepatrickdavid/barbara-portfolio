@@ -409,34 +409,13 @@ span {
 [class|="btn"] {
     position: relative;
     text-align: center;
-    font-size: 1rem;
-    font-family: $primary-font;
+    font-family: $secondary-font;
     display: inline-block;
     overflow: hidden;
     outline: none;
-    font-weight: 600;
+    font-weight: 500;
     text-decoration: none !important;
-    background-color: var(--primary-color);
-    color: white;
     transition: cubic-bezier(0.215, 0.610, 0.355, 1) .4s all;
-    @include media(hd) {
-        font-size: 1.125rem;
-    }
-    @include media(2k) {
-        font-size: 1.125rem;
-    }
-    @include media(4k) {
-        font-size: 1.125rem;
-    }
-    i {
-        padding-right: 0.25rem;
-    }
-    span {
-        +i {
-            padding-left: 0.875rem;
-            padding-right: 0;
-        }
-    }
     &[class*="arrow"] {
         &:after {
             content: "";
@@ -525,64 +504,10 @@ span {
     }
     &[class*='-big'],
     &[class*='-lg'] {
-        height: 50px;
-        line-height: 50px;
-        padding: 0 42px;
-        @include media(hd) {
-            height: 55px;
-            line-height: 55px;
-        }
-        @include media(2k) {
-            height: 55px;
-            line-height: 55px;
-        }
-        @include media(4k) {
-            height: 55px;
-            line-height: 55px;
-        }
-        @include media(large) {
-            height: 45px;
-            line-height: 45px;
-            padding: 0 30px;
-        }
-        &[class*='-border'] {
-            line-height: 47px;
-            @include media(large) {
-                line-height: 41px;
-            }
-        }
-        &[class*="icon"] {
-            padding: 0 80px 0 30px;
-            @include media(large) {
-                padding: 0 70px 0 20px;
-            }
-            i {
-                @include media(large) {
-                    height: 30px;
-                    width: 30px;
-                    line-height: 30px;
-                }
-            }
-        }
+        height: 60px;
+        line-height: 60px;
         &[class*='-round'] {
-            border-radius: 25px;
-            @include media(large) {
-                border-radius: 22px;
-            }
-            &[class*='-circle'] {
-                width: 50px;
-                @include media(large) {
-                    width: 45px;
-                }
-            }
-            &[class*="icon"] {
-                i {
-                    border-radius: 18px;
-                    @include media(large) {
-                        border-radius: 15px;
-                    }
-                }
-            }
+            border-radius: 30px;
         }
     }
     &[class*='-xl'] {
@@ -611,6 +536,114 @@ span {
                 width: 70px;
                 @include media(large) {
                     width: 50px;
+                }
+            }
+        }
+    }
+    [class*="circle"] {
+        width: 60px;
+        height: 60px;
+        border-radius: 30px;
+        background-color: var(--primary-color);
+        background-image: url(#{$assetPath}/globals/btn-arrow-white.svg);
+        background-size: 29px 29px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        @include media(small) {
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            background-size: 24px 24px;
+        }
+    }
+    &[class*="line"] {
+        &[class*="arrow"] {
+            display: flex;
+            [class*="circle"] {
+                &[class*="arrow"] {
+                    &:first-of-type {
+                        transform: scale(0);
+                        opacity: 0;
+                        transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+                    }
+                    &:last-of-type {
+                        opacity: 1;
+                        transform: translateX(-50px) scale(1);
+                        transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+                        transition-delay: 1s;
+                        @include media(small) {
+                            transform: translateX(-40px) scale(1);
+                        }
+                    }
+                }
+            }
+            [class*="label"] {
+                font-size: 2rem;
+                position: relative;
+                overflow: hidden;
+                transform: translateX(-60px);
+                transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+                transition-delay: .3s;
+                @include media(small) {
+                    font-size: 1.5rem;
+                    transform: translateX(-50px);
+                }
+                @include media(phoneplus) {
+                    font-size: 1.25rem;
+                }
+                @include media(phoneandroid) {
+                    font-size: 1.25rem;
+                }
+                @include media(phonesmall) {
+                    font-size: 1rem;
+                }
+                &:after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    height: 3px;
+                    background-color: $secondary-color;
+                    transform-origin: right;
+                    will-change: transform;
+                    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+                }
+            }
+            &:hover {
+                [class*="label"] {
+                    transform: translateX(15px);
+                    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+                    transition-delay: 0.2s;
+                }
+                [class*="circle"] {
+                    &[class*="arrow"] {
+                        &:first-of-type {
+                            transform: scale(1);
+                            opacity: 1;
+                            transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+                            transition-delay: .2s;
+                        }
+                        &:last-of-type {
+                            transform: translateX(-50px) scale(0);
+                            opacity: 0;
+                            transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+                        }
+                    }
+                }
+            }
+        }
+        &[class*="lg"] {
+            @include media(small) {
+                line-height: 50px;
+                height: 50px;
+            }
+        }
+        &:hover {
+            [class*="label"] {
+                &:after {
+                    transform: translateX(100%);
+                    transition: .4s cubic-bezier(0.075, 0.82, 0.165, 1);
                 }
             }
         }
@@ -695,6 +728,7 @@ span {
                     &.dark {
                         transform: translate(22px, -95%);
                         transition-delay: 1s;
+                        color: white;
                     }
                 }
             }
@@ -726,48 +760,13 @@ span {
                     &.light {
                         transform: translate(-24px, 5%);
                         transition-delay: 0.75s;
+                        color: $primary-color;
                     }
                     &.dark {
                         transform: translate(22px, 100%);
                     }
                 }
             }
-        }
-    }
-    &[class*="nav"] {
-        i {
-            font-size: 1.875rem;
-            color: currentColor;
-            transform: translateY(0.35rem);
-            display: inline-block;
-            @include media(phoneplus) {
-                padding-right: 0;
-            }
-        }
-        span {
-            +i {
-                padding-left: 0.25rem;
-            }
-        }
-        @include media(medium) {
-            height: 45px;
-            line-height: 45px;
-            border-radius: 50%;
-            margin: 0 5px;
-            span {
-                display: none;
-            }
-        }
-        @include media(phoneplus) {
-            width: 45px;
-            padding: 0;
-            text-align: center;
-        }
-        &[class*='-medium'] {
-            font-size: 1.5rem;
-        }
-        &[class*='-small'] {
-            font-size: 1.25rem;
         }
     }
     &[class*='-small'],

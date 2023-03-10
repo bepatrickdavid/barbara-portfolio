@@ -6,6 +6,9 @@
         @media screen and (min-width: $full+1) {
             min-height: var(--viewport-height);
         }
+        @include media(full) {
+            padding-top: 217px;
+        }
         [class*="row"] {
             [class*="col-"] {
                 &:nth-child(1) {

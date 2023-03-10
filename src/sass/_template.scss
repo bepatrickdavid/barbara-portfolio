@@ -7,6 +7,7 @@
 :root {
     --main-padding-left: 80px;
     --main-padding-right: 80px;
+    --main-border-radius: 45px;
     @include media(fullhd) {
         --main-padding-left: 4.166666vw;
         --main-padding-right: 4.166666vw;
@@ -18,6 +19,9 @@
     @include media(small) {
         --main-padding-left: 25px;
         --main-padding-right: 25px;
+    }
+    @include media(phoneplus) {
+        --main-border-radius: 30px;
     }
 }
 
@@ -32,6 +36,51 @@ html {
         --neutral-800: var(--white);
         --paragraph-color: var(--white);
         --paragraph-color-light: var(--white);
+        --template-bg: var(--dark-bg);
+        #theme-mode {
+            [class*=caption] {
+                span {
+                    &.light {
+                        transform: translate(0, -100%);
+                        transition-delay: .5s;
+                    }
+                    &.dark {
+                        transform: translate(0, 120%);
+                    }
+                }
+            }
+        }
+        [class*="btn"] {
+            &[class*="line"] {
+                [class*="label"] {
+                    color: var(--white);
+                    &:after {
+                        background-color: var(--white);
+                    }
+                }
+                &[class*="arrow"] {
+                    [class*="circle"] {
+                        background-color: $secondary-color;
+                        background-image: url(#{$assetPath}/globals/btn-arrow.svg);
+                    }
+                }
+            }
+        }
+    }
+    &[data-theme="light"] {
+        #theme-mode {
+            [class*=caption] {
+                span {
+                    &.light {
+                        transform: translate(0, 120%);
+                    }
+                    &.dark {
+                        transform: translate(0, 0%);
+                        transition-delay: .5s;
+                    }
+                }
+            }
+        }
     }
 }
 
